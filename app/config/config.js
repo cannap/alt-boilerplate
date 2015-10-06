@@ -1,15 +1,7 @@
-import debug from 'debug';
 import objectAssign from 'react/lib/Object.assign';
-
 import baseConfig from './all.js';
-const env = process.env.NODE_ENV || 'development';
-let config;
 
-try {
-  config = require(`./${env}`);
-}
-catch (error) {
-  debug('dev')(`No specific configuration for env ${env}`);
-}
+// let config = require('webpack-config-loader!../../config/config.js');
+let config = require('../../config/config');
 
 export default objectAssign(baseConfig, config);

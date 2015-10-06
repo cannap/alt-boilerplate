@@ -43,5 +43,5 @@ node_modules
 
 bower_components
 
-app/config/development.js
-app/config/production.js
+config/development.js
+config/production.js
