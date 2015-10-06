@@ -22,19 +22,6 @@ npm install
 bower install
 ```
 
-Copy `config.js.example` in `config.js` and edit `API_ROOT` with the HOSTNAME or IP of the API endpoint.
-
-```
-this.config = {
-  development: {
-    API_ROOT: 'http://ip or hostname:port'
-  },
-  production: {
-    API_ROOT: 'http://ip or hostname:port'
-  }
-}
-```
-
 Run the application in the development environment:
 
 ```
