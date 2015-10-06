@@ -1,0 +1,17 @@
+@import '~foundation-sites/scss/foundation/components/global';
+@import '~foundation-sites/scss/foundation/components/grid';
+@import './_variables';
+
+body {
+  font-family: 'Lato-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+

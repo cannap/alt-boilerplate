@@ -1,0 +1,9 @@
+{
+  "name": "spacebunny-frontend",
+  "version": "0.0.2",
+  "dependencies": {
+    "normalize.css": "~3.0.2",
+    "modernizr": "^2.8.3",
+    "stomp-websocket": "~2.3.4"
+  }
+}
