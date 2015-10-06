@@ -76,7 +76,7 @@ module.exports = function(options) {
   else {
     plugins.push(
       new HtmlWebpackPlugin({
-        title: 'Avatar',
+        title: 'Alt Boilerplate',
         template: path.join(__dirname, 'public', 'index.html'),
         inject: 'body'
       }),

@@ -7,18 +7,17 @@ class Home extends Component {
     flux: PropTypes.object.isRequired
   }
 
-  router = this.props.flux.getStore('router').getState().router;
-
-  _t = IntlMixin.getIntlMessage
-
-
   componentWillMount() {
     this.props.flux.getActions('page-title').set(this._t('home.page-title'));
   }
 
+  router = this.props.flux.getStore('router').getState().router;
+
+  _t = IntlMixin.getIntlMessage
+
   render() {
     return (
-      <div className='content'>
+      <div className="content">
         Home
       </div>
     );

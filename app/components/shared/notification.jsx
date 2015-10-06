@@ -23,12 +23,6 @@ class Notification extends Component {
     allowHTML: false
   };
 
-  removeNotification = (n) => {
-    this.props.flux.getActions('notifications').removeNotification(n);
-  }
-
-  _t = IntlMixin.getIntlMessage
-
   componentWillMount() {
     this.props.flux.
       getStore('notifications').listen(this.onChange);
@@ -38,7 +32,7 @@ class Notification extends Component {
     this.props.flux.
       getStore('notifications').unlisten(this.onChange);
   }
-  
+
   onChange = ({notifications}) => {
     notifications.forEach((n) => {
       n = _.merge(this.state.defaultNotification, n);
@@ -47,10 +41,16 @@ class Notification extends Component {
     });
   }
 
+  _t = IntlMixin.getIntlMessage
+
+  removeNotification = (n) => {
+    this.props.flux.getActions('notifications').removeNotification(n);
+  }
+
   render() {
     return (
       <div>
-        <NotificationSystem ref='notificationSystem' allowHTML={this.state.allowHTML} />
+        <NotificationSystem ref="notificationSystem" allowHTML={this.state.allowHTML} />
       </div>
     );
   }

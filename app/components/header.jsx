@@ -10,10 +10,6 @@ class Header extends Component {
     locales: PropTypes.array.isRequired
   }
 
-  _getIntlMessage = IntlMixin.getIntlMessage
-
-  router = this.props.flux.getStore('router').getState().router;
-
   state = {
     spinner: false
   }
@@ -24,23 +20,27 @@ class Header extends Component {
     .listen(this._handleRequestStoreChange);
   }
 
+  _getIntlMessage = IntlMixin.getIntlMessage
+
+  router = this.props.flux.getStore('router').getState().router;
+
   _handleRequestStoreChange = ({inProgress}) => {
     return this.setState({spinner: inProgress});
   }
 
   render() {
-    let navigation = <div></div>;
+    const navigation = <div></div>;
     let spinner = <div></div>;
     if (this.state.spinner) {
-      spinner = <Spinner spinnerName='double-bounce'/>;
+      spinner = <Spinner spinnerName="double-bounce"/>;
     }
 
     return (
       <header>
-        <section className='header'>
+        <section className="header">
 
           {/* React Logo in header */}
-          <Link to='/' className='header__logo' />
+          <Link to="/" className="header__logo" />
 
           {/* Spinner in the top right corner */}
           {spinner}
