@@ -1,5 +1,7 @@
 # alt-boilerplate
 
+A boilerplate app built with React and alt. Based on [Josh Perez's isomorphic implementation](https://github.com/goatslacker/alt). 
+
 ## Javascript guidelines
 All JS code should adhere [these guidelines](https://github.com/airbnb/javascript)
 
@@ -46,8 +48,4 @@ gulp build
 ```
 
 The app runs at `http://localhost:8080`
-
-## Notes
-
-The compiled application will be placed in the `dist` folder.
 
